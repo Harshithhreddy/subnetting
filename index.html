@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subnetting Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FLSM Subnet Calculator</h1>
+        <label for="networkId">Enter Network ID (e.g., 192.168.1.0):</label>
+        <input type="text" id="networkId" placeholder="192.168.1.0">
+        
+        <label for="subnets">Enter Number of Subnets:</label>
+        <input type="number" id="subnets" min="1" placeholder="4">
+
+        <button onclick="calculateSubnet()">Calculate</button>
+
+        <h3>Results</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subnet</th>
+                    <th>Network ID</th>
+                    <th>First Host</th>
+                    <th>Last Host</th>
+                    <th>Broadcast Address</th>
+                </tr>
+            </thead>
+            <tbody id="results"></tbody>
+        </table>
+
+        <h3 id="subnetMask"></h3>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
